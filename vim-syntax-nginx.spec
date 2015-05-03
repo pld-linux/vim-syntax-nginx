@@ -8,6 +8,7 @@ License:	public domain
 Group:		Applications/Editors/Vim
 Source0:	http://www.vim.org/scripts/download_script.php?src_id=19394&/%{syntax}.vim
 # Source0-md5:	10395c7a028cc58030f82ab296f13ff3
+Source1:	ftdetect.vim
 URL:		http://www.vim.org/scripts/script.php?script_id=1886
 Requires:	vim-rt >= 4:7.2.170
 BuildArch:	noarch
@@ -25,9 +26,7 @@ Ten skrypt podświetla kod w pliku konfiguracyjnym nginx.
 %setup -qcT
 install -d syntax ftdetect
 cp -p %{SOURCE0} syntax/%{syntax}.vim
-cat > ftdetect/%{syntax}.vim <<EOF
-au BufNewFile,BufRead /etc/nginx/*.conf set filetype=%{syntax}
-EOF
+cp -p %{SOURCE1} ftdetect/%{syntax}.vim
 
 %install
 rm -rf $RPM_BUILD_ROOT
