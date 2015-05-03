@@ -3,7 +3,7 @@ Summary:	Vim syntax: Highlight code in nginx config file
 Summary(pl.UTF-8):	Opis składni dla Vima: podświetlanie kodu wewnątrz plików konfiguracyjnych nginx
 Name:		vim-syntax-%{syntax}
 Version:	0.3.3
-Release:	1
+Release:	2
 License:	public domain
 Group:		Applications/Editors/Vim
 Source0:	http://www.vim.org/scripts/download_script.php?src_id=19394&/%{syntax}.vim
